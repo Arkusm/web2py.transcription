@@ -4,3 +4,5 @@ errors
 sessions
 .pydevproject
 .project
+.settings
+__pycache__/
