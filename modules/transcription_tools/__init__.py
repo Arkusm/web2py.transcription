@@ -1,3 +1,19 @@
+# REQUIREMENTS
+#
+# module srt
+# module vosk
+# language model
+#
+# INSTALL
+#
+# cd web2py/applications/transcription
+# pip3 install -t modules srt
+# pip3 install -t modules vosk
+# cd private
+# wget https://alphacephei.com/vosk/models/vosk-model-de-0.21.zip
+# unzip vosk-model-de-0.21.zip
+
+
 from vosk import Model, KaldiRecognizer, SetLogLevel
 import sys
 import os
