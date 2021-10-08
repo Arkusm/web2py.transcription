@@ -18,8 +18,10 @@ def manage():
     return dict(grid=grid)
 
 def vtt():
-    return dict(message=transcription_tools.create_vtt(
-        '/home/mschmidt/Videos/100-Meinungen-Video-erstellen.mp4'))
+    video_path = '/home/mschmidt/Videos/100-Meinungen-Video-erstellen.mp4'
+    model_path = 'applications/transcription/private/model'
+    return dict(message=transcription_tools.create_vtt(model_path, video_path))
+        
 
 def user():
     return dict(form=auth())

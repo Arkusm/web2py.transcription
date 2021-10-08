@@ -24,9 +24,9 @@ import json
 import datetime
 
 
-def create_vtt(video_path):
+def create_vtt(model_path, video_path):
     sample_rate = 16000
-    model = Model("applications/transcription/private/model")
+    model = Model(model_path)
     rec = KaldiRecognizer(model, sample_rate)
     rec.SetWords(True)
 
