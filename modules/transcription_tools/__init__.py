@@ -24,14 +24,14 @@ import json
 import datetime
 
 
-def create_vtt():
+def create_vtt(video_path):
     sample_rate = 16000
     model = Model("applications/transcription/private/model")
     rec = KaldiRecognizer(model, sample_rate)
     rec.SetWords(True)
 
     process = subprocess.Popen(['ffmpeg', '-loglevel', 'quiet', '-i',
-                                '/home/mschmidt/Videos/100-Meinungen-Video-erstellen.mp4',
+                                video_path,
                                 '-ar', str(sample_rate) , '-ac', '1', '-f', 's16le', '-'],
                                 stdout=subprocess.PIPE)
 
