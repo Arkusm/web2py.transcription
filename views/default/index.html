@@ -2,7 +2,11 @@
 
 <div class="row">
   <div class="col-md-12">
-       <h1>{{=u1}}</h1>
-      <h2>{{=u2}}</h2>
+<h1>Current Images</h1>
+<ul>
+{{for image in images:}}
+{{=LI(A(image.title, _href=URL("show", args=image.id)))}}
+{{pass}}
+</ul>
   </div>
 </div>

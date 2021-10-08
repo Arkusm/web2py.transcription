@@ -6,7 +6,12 @@
 
 # ---- example index page ----
 def index():
-    return dict(u1="Überschrift 1", u2="Überschrift 2")
+    images = db().select(db.image.ALL, orderby=db.image.title)
+    return dict(images=images)
+
+def manage():
+    grid = SQLFORM.smartgrid(db.image, linked_tables=['post'])
+    return dict(grid=grid)
 
 # ---- API (example) -----
 @auth.requires_login()
