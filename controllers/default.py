@@ -8,8 +8,6 @@ import io
 #from transcription_tools import create_vtt
 transcription_tools = local_import('transcription_tools', reload=True)
 
-# app_folder = ''
-# video_path = 'applications/transcription/uploads/media_file.file.bc22f2543688e775.aW1hZ2VmaWxtX2V0ZWFjaGluZ29yZy5tcDQ=.mp4'
 model = 'private/model'
 
 
