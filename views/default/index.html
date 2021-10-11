@@ -5,7 +5,13 @@
 <h1>Mediendateien</h1>
 <ul>
 {{for media_file in media_files:}}
-{{=LI(A(media_file.title, _href=URL("show", args=media_file.id)))}}
+<li>
+	{{=media_file.title}}
+	{{=A("[Erstelle WebVTT - Einzeilig]", _href=URL("webvtt_single_line", args=media_file.id))}}
+	{{=A("[Erstelle WebVTT - Mehrzeilig]", _href=URL("webvtt", args=media_file.id))}}
+	{{if media_file.vtt_single_line:}} {{=A("[Download WebVTT - Einzeilig]", _href=URL("download_webvtt_single_line", args=media_file.id))}} {{pass}}
+	{{if media_file.vtt:}} {{=A("[Download WebVTT - Mehrzeilig]", _href=URL("download_webvtt", args=media_file.id))}} {{pass}}
+</li>
 {{pass}}
 </ul>
   </div>

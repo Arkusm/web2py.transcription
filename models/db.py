@@ -157,7 +157,8 @@ db = DAL("sqlite://storage.sqlite")
 
 db.define_table('media_file',
                 Field('title', unique=True),
-                Field('vtt_url'),
+                Field('vtt_single_line'),
+                Field('vtt'),
                 Field('file', 'upload', autodelete=True),
                 format = '%(title)s')
 
