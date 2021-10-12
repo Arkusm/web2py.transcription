@@ -11,3 +11,8 @@
 /vosk/
 /vosk-0.3.31.dist-info/
 /vosk.libs/
+/docopt-0.6.2.dist-info/
+/tests/
+/webvtt/
+/webvtt_py-0.4.6.dist-info/
+/docopt.py
