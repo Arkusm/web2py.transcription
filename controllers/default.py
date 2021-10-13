@@ -23,6 +23,7 @@
 # cd private
 # wget https://alphacephei.com/vosk/models/vosk-model-de-0.21.zip
 # unzip vosk-model-de-0.21.zip
+# mv vosk-model-de-0.21 model
 # -------------------------------------------------------------------------
 
 import io
