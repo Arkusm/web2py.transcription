@@ -35,8 +35,7 @@ elif request.env.trusted_lan_prefix and \
     request.is_local = True
 elif (remote_addr not in hosts) and (remote_addr != '127.0.0.1') and \
     (request.function != 'manage'):
-    # raise HTTP(200, T('appadmin is disabled because insecure channel'))
-    request.is_local = True
+    raise HTTP(200, T('appadmin is disabled because insecure channel'))
 
 if request.function == 'manage':
     if not 'auth' in globals() or not request.args:
