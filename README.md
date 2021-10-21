@@ -8,9 +8,9 @@ web2py.transcription is a web application based on web2py for transcribing audio
 * pip3
 * python module srt
 * python module vosk
-* language model
+* vosk language model
 
-# INSTALL UBUNTU
+# INSTALL ON UBUNTU
 
 ```
 apt install ffmpeg
