@@ -54,4 +54,10 @@ The application works only for logged-in users with the role 'manager' !
 * Create the new Entry 'manager'
 * Go back to http://localhost:8000/transcription/appadmin
 * Click on db.auth_membership -> New entry
-* Click and select your user id in the first field and the new group 'manager' in the scond field
+* Click and select your user id in the first field and the new group 'manager' in the second field
+
+If you already have an account with the appropriate permissions
+
+* Point your webbrowser to http://localhost:8000/transcription
+* Log in
+* To upload new audio or video files, click on Manage media in the menu
