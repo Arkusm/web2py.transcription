@@ -1,3 +1,5 @@
+web2py.transcription is a web application based on web2py for transcribing audio and video files. The core of the application is the speech recognition toolkit vosk.
+
 # REQUIREMENTS
 
 * ffmpeg
