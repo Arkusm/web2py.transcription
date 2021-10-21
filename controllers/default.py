@@ -52,6 +52,7 @@ global response
 model_mod_path = 'private/model'
 
 
+@auth.requires_membership('manager')
 def index():
     media_files = db().select(db.media_file.ALL, orderby=db.media_file.title)
     return dict(media_files=media_files)
@@ -63,6 +64,7 @@ def manage():
     return dict(grid=grid)
 
 
+@auth.requires_membership('manager')
 def webvtt_single_line():
     # Get mediafile from request
     media_file = (db.media_file(request.args(0, cast=int)) or
@@ -128,6 +130,7 @@ def webvtt_single_line():
     redirect(request.env.http_referer)
 
 
+@auth.requires_membership('manager')
 def webvtt():
     # Get mediafile from request
     media_file = (db.media_file(request.args(0, cast=int)) or
@@ -184,6 +187,7 @@ def webvtt():
     redirect(request.env.http_referer)
 
 
+@auth.requires_membership('manager')
 def download_webvtt_single_line():
 
     media_file = (db.media_file(request.args(0, cast=int)) or
@@ -200,6 +204,7 @@ def download_webvtt_single_line():
     return(f)
 
 
+@auth.requires_membership('manager')
 def download_webvtt():
 
     media_file = (db.media_file(request.args(0, cast=int)) or
